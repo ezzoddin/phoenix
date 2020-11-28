@@ -10,7 +10,7 @@ include_once '../../models/App.php';
 $database = new Database();
 $db = $database->connect();
 
-// Instantiate blog post object
+// Instantiate app object
 $app = new App($db);
 
 // Blog post query
