@@ -13,7 +13,7 @@ $db = $database->connect();
 // Instantiate app object
 $app = new App($db);
 
-// Blog post query
+// app query
 $result = $app->read();
 // Get row count
 $num = $result->rowCount();

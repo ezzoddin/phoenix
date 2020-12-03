@@ -43,18 +43,17 @@ class App
         return $stmt;
     }
 
-
     // Get Single App
     public function read_single()
     {
         // Create query
-        $query = "SELECT * FROM " . $this->table . " WHERE id = ? LIMIT 0,1";
+        $query = "SELECT * FROM " . $this->table . " WHERE app = ? ";
 
         // Prepare statement
         $stmt = $this->conn->prepare($query);
 
         // Bind ID
-        $stmt->bindParam(1, $this->id);
+        $stmt->bindParam(1, $this->app);
 
         // Execute query
         $stmt->execute();
@@ -77,5 +76,21 @@ class App
 
 
     }
+
+    public function find_comment_by_app_name($app_name)
+    {
+
+    }
+
+    public function mostdownlod($count){
+
+    }
+
+
+
+
+
+
+
 
 }

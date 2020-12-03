@@ -14,10 +14,11 @@ $db = $database->connect();
 $app = new App($db);
 
 // Get ID
-$app->app = isset($_GET['app']) ? $_GET['app'] : die();
+$app->app = isset($_POST['app']) ? $_POST['app'] : die();
 
 // Get post
 $app->read_single();
+$app->find_comment_by_app_name($_POST['app']);
 
 // Create array
 $app_arr = array(
@@ -34,7 +35,8 @@ $app_arr = array(
     'genres' => $app->genres,
     'last_updated' => $app->last_updated,
     'current_ver' => $app->current_ver,
-    'android_ver' => $app->android_ver
+    'android_ver' => $app->android_ver,
+    'comment' =>
 );
 
 // Make JSON
