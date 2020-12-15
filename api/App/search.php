@@ -13,15 +13,17 @@ $db = $database->connect();
 // Instantiate App object
 $app = new App($db);
 
+$item = isset($_GET['q']) ? $_GET['q'] : die();
+
 // app query
-$result = $app->read();
+$result = $app->find($item);
 // Get row count
 $num = $result->rowCount();
 
 // Check if any apps
 if ($num > 0) {
     // Post array
-    $apps_arr = array();
+    $apps_arr =[];
     // $apps_arr['data'] = array();
 
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -55,6 +57,6 @@ if ($num > 0) {
 } else {
     // No Posts
     echo json_encode(
-        array('message' => 'No Apps Found')
+        array('message' => 'No Result Found')
     );
 }

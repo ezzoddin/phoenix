@@ -14,7 +14,7 @@ $db = $database->connect();
 $app = new App($db);
 
 // app query
-$result = $app->read();
+$result = $app->most_download(4);
 // Get row count
 $num = $result->rowCount();
 
