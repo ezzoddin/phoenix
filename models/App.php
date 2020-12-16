@@ -6,7 +6,7 @@ class App
     private $conn;
     private $table = 'playstore';
 
-    // Post Properties
+    // Apps Properties
     public $app;
     public $category;
     public $rating;
@@ -28,7 +28,7 @@ class App
         $this->conn = $db;
     }
 
-    // Get App
+    // Get Apps
     public function read()
     {
         // Create query
@@ -43,6 +43,7 @@ class App
         return $stmt;
     }
 
+
     // Get Single App
     public function read_single()
     {
@@ -52,7 +53,7 @@ class App
         // Prepare statement
         $stmt = $this->conn->prepare($query);
 
-        // Bind ID
+        // Bind name
         $stmt->bindParam(1, $this->app);
 
         // Execute query
@@ -77,20 +78,70 @@ class App
 
     }
 
-    public function find_comment_by_app_name($app_name)
+
+    public function most_download($limit)
     {
+        // Create query
+        $query = "SELECT * FROM  " . $this->table . " ORDER BY installs  DESC  LIMIT $limit";
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Execute query
+        $stmt->execute();
+
+        return $stmt;
 
     }
 
-    public function mostdownlod($count){
+    public function most_points($limit)
+    {
+        // Create query
+        $query = "SELECT * FROM  " . $this->table . " ORDER BY rating  DESC  LIMIT $limit";
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Execute query
+        $stmt->execute();
+
+        return $stmt;
+
+    }
+
+    public function find($item)
+    {
+        // Create query
+        $query = "SELECT * FROM  " . $this->table . "  WHERE app LIKE :keywords OR category LIKE :keywords OR  genres LIKE :keywords";
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindValue(':keywords', '%' . $item . '%', PDO::PARAM_STR);
+
+        // Execute query
+        $stmt->execute();
+
+        return $stmt;
 
     }
 
 
+    public function find_related_apps($name, $limit)
+    {
+        // Create query
+        $query = "SELECT * FROM  " . $this->table . "  WHERE category = :name LIMIT $limit";
 
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
 
+        $stmt->bindValue(':name', $name);
 
+        // Execute query
+        $stmt->execute();
 
+        return $stmt;
 
+    }
 
 }
