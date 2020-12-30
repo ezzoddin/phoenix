@@ -13,7 +13,7 @@ $db = $database->connect();
 // Instantiate App object
 $app = new App($db);
 
-$name = isset($_GET['category']) ? $_GET['category'] : die();
+$name = isset($_GET['q']) ? $_GET['q'] : die();
 
 // app query
 $result = $app->find_related_apps($name, 4);

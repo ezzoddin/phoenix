@@ -14,7 +14,7 @@ $db = $database->connect();
 $app = new App($db);
 
 // Get ID
-$app->app = isset($_GET['app']) ? $_GET['app'] : die();
+$app->app = isset($_GET['q']) ? $_GET['q'] : die();
 
 // Get app
 $app->read_single();
@@ -34,7 +34,8 @@ $app_arr = array(
     'genres' => $app->genres,
     'last_updated' => $app->last_updated,
     'current_ver' => $app->current_ver,
-    'android_ver' => $app->android_ver
+    'android_ver' => $app->android_ver,
+    'comments' => $app->comments
 );
 
 // Make JSON

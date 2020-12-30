@@ -1,5 +1,7 @@
 <?php
 
+include 'Review.php';
+
 class App
 {
     // DB stuff
@@ -20,12 +22,14 @@ class App
     public $last_updated;
     public $current_ver;
     public $android_ver;
+    public $comments;
 
 
     // Constructor with DB
     public function __construct($db)
     {
         $this->conn = $db;
+        $this->comments = new Review($db);
     }
 
     // Get Apps
@@ -42,7 +46,6 @@ class App
 
         return $stmt;
     }
-
 
     // Get Single App
     public function read_single()
@@ -75,10 +78,14 @@ class App
         $this->current_ver = $row['current_ver'];
         $this->android_ver = $row['android_ver'];
 
+        // Set App Name Of review
+        $this->comments->app = $this->app;
+        $this->comments = $this->comments->get_reviews();
+
 
     }
 
-
+    // Get Most Download Apps
     public function most_download($limit)
     {
         // Create query
@@ -94,6 +101,7 @@ class App
 
     }
 
+    // Get Most Point Apps
     public function most_points($limit)
     {
         // Create query
@@ -109,6 +117,7 @@ class App
 
     }
 
+    // Serach item
     public function find($item)
     {
         // Create query
@@ -126,7 +135,7 @@ class App
 
     }
 
-
+    // Similar apps
     public function find_related_apps($name, $limit)
     {
         // Create query
@@ -143,5 +152,42 @@ class App
         return $stmt;
 
     }
+
+    // Get Categories
+    public function find_categories()
+    {
+        // Create query
+
+        $query = "SELECT DISTINCT category FROM  " . $this->table;
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Execute query
+        $stmt->execute();
+
+        return $stmt;
+
+    }
+
+
+    // Get Apps by same category name
+    public function find_category($name)
+    {
+        // Create query
+        $query = "SELECT * FROM  " . $this->table . "  WHERE category = :name ";
+
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindValue(':name', $name);
+
+        // Execute query
+        $stmt->execute();
+
+        return $stmt;
+
+    }
+
 
 }

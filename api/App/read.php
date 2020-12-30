@@ -18,6 +18,7 @@ $result = $app->read();
 // Get row count
 $num = $result->rowCount();
 
+
 // Check if any apps
 if ($num > 0) {
     // Post array
@@ -40,15 +41,16 @@ if ($num > 0) {
             'genres' => $genres,
             'last_updated' => $last_updated,
             'current_ver' => $current_ver,
-            'android_ver' => $android_ver
-        );
+            'android_ver' => $android_ver,
 
+        );
 
         // Push to "data"
         array_push($apps_arr, $app_item);
         //array_push($apps_arr['data'], $app_item);
     }
 
+    
     // Turn to JSON & output
     echo json_encode($apps_arr);
 
