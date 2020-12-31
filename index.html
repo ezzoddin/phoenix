@@ -4,7 +4,7 @@
 <head>
 
     <head>
-        <title>مانسانا </title>
+        <title>Phoenix</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,7 +20,6 @@
     <html>
 
 <body>
-
 
 
 
@@ -69,9 +68,9 @@
 
     <div class="container main1">
         <div class="social">
-           <a href="#"><img class="social1" src="image/linkedin.png"></a>
-           <a href="#"></a> <img class="social1" src="image/instagram.png"></a>
-           <a href="#"><img class="social1" src="image/facebook.png"></a>
+            <a href="#"><img class="social1" src="image/linkedin.png"></a>
+            <a href="#"></a> <img class="social1" src="image/instagram.png"></a>
+            <a href="#"><img class="social1" src="image/facebook.png"></a>
 
         </div>
         <div class="box">
@@ -120,7 +119,42 @@
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <section class="cahrt-sec">
+            <aside class="chart vert">
+                <canvas id="canPie" width="300" height="200" data-values='40, 30, 20, 60, 10, 50'>
+                    This browser does not support HTML5 Canvas.
+                </canvas>
+                <ol class="legend">
+                    <li class="key one">One</li>
+                    <li class="key two">Two</li>
+                    <li class="key three">Three</li>
+                    <li class="key four">Four</li>
+                    <li class="key five">Five</li>
+                    <li class="key six">Six</li>
+                </ol>
+            </aside>
+            <aside class="chart">
+                <canvas id="canPeak" width="0" height="0" data-values='40, 30, 20, 60, 10, 50'>
+                    This browser does not support HTML5 Canvas.
+                </canvas>
+               
+            </aside>
+            <aside class="chart">
+                <canvas id="canBar" width="300" height="200" data-values='40, 30, 20, 60, 10, 50'>
+                  This browser does not support HTML5 Canvas.
+                </canvas>
+                <ol class="legend horiz">
+                  <li class="key one">One</li>
+                  <li class="key two">Two</li>
+                  <li class="key three">Three</li>
+                  <li class="key four">Four</li>
+                  <li class="key five">Five</li>
+                  <li class="key six">Six</li>
+                </ol>
+              </aside>
+        </section>
+    </div>
     <div class="container title-but">
         <p class="title-c2">Most points</p>
         <button class="but">See More
@@ -288,7 +322,7 @@
 
     <div class="container title-but">
         <p class="title-c2">Most points</p>
-        <button  class="but">See More
+        <button class="but">See More
             <i class="las la-angle-double-right"></i>
         </button>
     </div>
@@ -455,17 +489,17 @@
         <p class="title-footer">Phoenix</p>
         <div class="container">
             <div class="row">
-                <div class="col1 col-lg-4">
+                <div class="col1 col-lg-4 col-md-6 col-sm-12">
                     <i class="las la-phone"></i>
                     <p>Call</p>
                     <p>091234566788</p>
                 </div>
-                <div class="col1 col-lg-4">
+                <div class="col1 col-lg-4 col-md-6 col-sm-12">
                     <i class="las la-envelope"></i>
                     <p>mail</p>
                     <p>ThePhoenix@yahoo.com</p>
                 </div>
-                <div class="col1 col-lg-4">
+                <div class="col1 col-lg-4 col-md-12 col-sm-12">
                     <i class="las la-map-marker"></i>
                     <p>Address</p>
                     <p>Iran,Semnan</p>
@@ -488,6 +522,9 @@
     <script src="js/main.js"></script>
     <script src="lib/owl/owl.carousel.min.js"></script>
     <script src="js/Site.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/main2.js"></script>
+
 
 
 
