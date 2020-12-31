@@ -528,7 +528,7 @@ hr.style1 {
   box-shadow: 0 8px 30px -7px #c9dff0;
   margin: 0 20px;
   padding: 0 10px;
-  border-radius: 20px;
+  border-radius: 12px;
   border: 0;
 }
 
@@ -553,10 +553,10 @@ hr.style1 {
 }
 
 .gtco-testimonials .card p {
-  font-size: 25px;
+  font-size: 18px;
   color: #555;
   padding-bottom: 0px;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .gtco-testimonials .active {
@@ -584,6 +584,25 @@ hr.style1 {
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
   outline: 0;
+}
+
+.up-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.down-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-12 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-matn {
+  width: 60%;
 }
 
 .box-information {
