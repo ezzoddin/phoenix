@@ -1,463 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <title>Phoenix </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <head>
-        <title>مانسانا </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="font/fontawesome/css/all.css">
-        <link rel="stylesheet" href="font/line-awesome/css/line-awesome.min.css">
-        <link rel="stylesheet" href="lib/owl/owl.carousel.min.css">
-        <link rel="stylesheet" href="lib/owl/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/mynewstyle.css">
-        <link rel="stylesheet"
-            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    </head>
-    <html>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/fontawesome/css/all.css">
+    <link rel="stylesheet" href="font/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="lib/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mynewstyle.css">
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
 
 <body>
 
+<div class="navigation-wrap start-header ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-md navbar-light">
 
+                    <a class="navbar-brand" target="_blank">
+                        <img src="image/logo@2x.png" alt="">
+                    </a>
 
-    <div class="navigation-wrap start-header ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar navbar-expand-md navbar-light">
-
-                        <a class="navbar-brand" target="_blank">
-                            <img src="image/logo@2x.png" alt="">
-                        </a>
-
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto py-4 py-md-0 ">
-                                <li class="nav-item active pl-4 pl-md-0 ml-0 ml-md-4 ">
-                                    <a class="nav-link  " href="">Home</a>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto py-4 py-md-0 ">
+                            <li class="nav-item active pl-4 pl-md-0 ml-0 ml-md-4 ">
+                                <a class="nav-link  " href="">Home</a>
 
-                                </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="">App</a>
-                                </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link" href="">Movie</a>
-                                </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                    <a class="nav-link " href="">Game</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="">App</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="">Movie</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link " href="">Game</a>
 
-                                </li>
+                            </li>
 
-                            </ul>
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="main container">
+    <div class="left">
+        <img src="image/art.jpg" alt="">
+    </div>
+    <div class="right">
+        <p id="name" class="title"></p>
+        <p id="category" class="sub-title"></p>
+        <div class="line-one">
+            <img src="image/inbox.png">
+            <p id="current_version">1.0.0</p>
+        </div>
+        <div class="line-one">
+            <img src="image/android.png">
+            <p id="android_version"></p>
+        </div>
+        <div class="line-one">
+            <img src="image/money-bag.png">
+            <p id="type"></p>
+        </div>
+
+        <button class="but">download</button>
+
+    </div>
+</section>
+
+<div class="container">
+    <div class="box-information">
+        <div class="card1">
+            <img src="image/001-meter.png">
+            <p id="size" class="question">19M</p>
+            <p class="answer">Size</p>
+        </div>
+        <div class="card1">
+            <img src="image/download.png">
+            <p id="installs"></p>
+            <p class="answer">Installs</p>
+        </div>
+        <div class="card1">
+            <img src="image/002-star.png">
+            <p id="rating" class="question"></p>
+            <p class="answer">Rating</p>
+        </div>
+        <div class="card1">
+            <img src="image/003-tag.png">
+            <p id="price" class="question"></p>
+            <p class="answer">Price</p>
+        </div>
+        <div class="card1">
+            <img src="image/005-chat.png">
+            <p id="reviews" class="question"></p>
+            <p class="answer">Review</p>
+        </div>
+        <div class="card1">
+            <img src="image/refresh.png">
+            <p id="last_updated" class="question"></p>
+            <p class="answer">Last Update</p>
+        </div>
+        <div class="card1">
+            <img src="image/android.png">
+            <p id="genres" class="question"></p>
+            <p class="answer">genres</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container title-but">
+    <p class="title-c2">Similar Apps </p>
+    <button class="but">See More
+        <i class="las la-angle-double-right"></i>
+    </button>
+</div>
+
+<div class="container box2">
+    <div class="wrapper">
+        <div class="product owl-carousel ">
+            <div class="card-1">
+                <div class="up">
+                    <p class="app-name">
+                        <a href="">
+                            Learn To Draw ..
+                        </a>
+                    </p>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <div class="up-1">
+                            <p class="downloads-c">10,000+</p>
                         </div>
+                        <div class="down-1">
+                            <p class="downloads">Downloads</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up-1 row">
+                            <i class="las la-star"></i>
+                            <p class="downloads-c">4.4</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Reviews</p>
+                        </div>
+                    </div>
 
-                    </nav>
+                </div>
+            </div>
+            <div class="card-1">
+                <div class="up">
+                    <p class="app-name">Learn To Draw ... </p>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <div class="up-1">
+                            <p class="downloads-c">10,000+</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Downloads</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up-1 row">
+                            <i class="las la-star"></i>
+                            <p class="downloads-c">4.4</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Reviews</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-1">
+                <div class="up">
+                    <p class="app-name">Learn To Draw ... </p>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <div class="up-1">
+                            <p class="downloads-c">10,000+</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Downloads</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up-1 row">
+                            <i class="las la-star"></i>
+                            <p class="downloads-c">4.4</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Reviews</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-1">
+                <div class="up">
+                    <p class="app-name">Learn To Draw ... </p>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <div class="up-1">
+                            <p class="downloads-c">10,000+</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Downloads</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up-1 row">
+                            <i class="las la-star"></i>
+                            <p class="downloads-c">4.4</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Reviews</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-1">
+                <div class="up">
+                    <p class="app-name">Learn To Draw ... </p>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <div class="up-1">
+                            <p class="downloads-c">10,000+</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Downloads</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up-1 row">
+                            <i class="las la-star"></i>
+                            <p class="downloads-c">4.4</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Reviews</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card-1">
+                <div class="up">
+                    <p class="app-name">Learn To Draw ... </p>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <div class="up-1">
+                            <p class="downloads-c">10,000+</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Downloads</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="up-1 row">
+                            <i class="las la-star"></i>
+                            <p class="downloads-c">4.4</p>
+                        </div>
+                        <div class="down-1">
+                            <p class="downloads">Reviews</p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
-    <section class="main container">
-        <div class="left">
-            <img src="image/art.jpg" alt="">
-        </div>
-        <div class="right">
-            <p id="app" class="title">Photo Editor & Candy Camera & Grid & ScrapBook</p>
-            <p id="category" class="sub-title">ART_AND_DESIGN</p>
-            <div class="line-one">
-                <img src="image/inbox.png">
-                <p id="current_ver">1.0.0</p>
-            </div>
-            <div class="line-one">
-                <img src="image/android.png">
-                <p id="android_ver"></p>
-            </div>
-            <div class="line-one">
-                <img src="image/money-bag.png">
-                <p id="type"></p>
+</div>
+
+
+<!--
+<div class="container py-5">
+    <div id="comment" class="row">
+
+    </div>
+</div>
+-->
+
+
+<div class="gtco-testimonials">
+    <h2>Comments</h2>
+    <div id="comment" class="owl-carousel owl-carousel1 owl-theme bg-dark">
+
+
+<!--
+        <div class="card text-center">
+
+            <div class="card-body">
+                <p id="translate_review" class="card-text">
+                    I like eat delicious food. That's I'm cooking food myself,
+                    case "10 Best
+                    Foods" helps lot, also "Best Before (Shelf Life)"
+                </p>
+                <br>
+                <hr class="style1">
+                <br>
+                <div class="box-12">
+                    <div class="left-img">
+                        <img class="card-img-top"
+                             src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
+                             alt="">
+                    </div>
+                    <div class="text-right">
+                        <div class="up-2">
+                            <p class="sentiment"><b>Sentiment</b></p>
+                            <p id="sentiment" class="value-sent">positive</p>
+                        </div>
+                        <div class="down-2">
+                            <p class="polarity"><b>Sentiment_Polarity</b></p>
+                            <p id="sentiment_polarity" class="value-polarity">1</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <button class="but">download</button>
-
         </div>
-    </section>
+-->
+
+
+    </div>
+
+
+</div>
+
+
+
+<footer>
+    <p class="title-footer">Phoenix</p>
     <div class="container">
-        <div class="box-information">
-            <div class="card1">
-                <img src="image/001-meter.png">
-                <p class="question">19M</p>
-                <p class="answer">Size</p>
+        <div class="row">
+            <div class="col1 col-lg-4">
+                <i class="las la-phone"></i>
+                <p>Call</p>
+                <p>091234566788</p>
             </div>
-            <div class="card1">
-                <img src="image/download.png">
-                <p id="installs"></p>
-                <p class="answer">Installs</p>
+            <div class="col1 col-lg-4">
+                <i class="las la-envelope"></i>
+                <p>mail</p>
+                <p>ThePhoenix@yahoo.com</p>
             </div>
-            <div class="card1">
-                <img src="image/002-star.png">
-                <p id="rating" class="question"></p>
-                <p class="answer">Rating</p>
-            </div>
-            <div class="card1">
-                <img src="image/003-tag.png">
-                <p id="price" class="question"></p>
-                <p class="answer">Price</p>
-            </div>
-            <div class="card1">
-                <img src="image/005-chat.png">
-                <p id="reviews" class="question"></p>
-                <p class="answer">Review</p>
-            </div>
-            <div class="card1">
-                <img src="image/refresh.png">
-                <p id="last_updated" class="question"></p>
-                <p class="answer">Last Update</p>
-            </div>
-            <div class="card1">
-                <img src="image/android.png">
-                <p id="genres" class="question"></p>
-                <p class="answer">genres</p>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <div class="container title-but">
-        <p class="title-c2">Similar Apps </p>
-        <button class="but">See More
-            <i class="las la-angle-double-right"></i>
-        </button>
-    </div>
-    <div class="container box2">
-        <div class="wrapper">
-            <div class="product owl-carousel ">
-                <div class="card-1">
-                    <div class="up">
-                        <p class="app-name">Learn To Draw ... </p>
-                    </div>
-                    <div class="down">
-                        <div class="left">
-                            <div class="up-1">
-                                <p class="downloads-c">10,000+</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Downloads</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="up-1 row">
-                                <i class="las la-star"></i>
-                                <p class="downloads-c">4.4</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Reviews</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card-1">
-                    <div class="up">
-                        <p class="app-name">Learn To Draw ... </p>
-                    </div>
-                    <div class="down">
-                        <div class="left">
-                            <div class="up-1">
-                                <p class="downloads-c">10,000+</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Downloads</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="up-1 row">
-                                <i class="las la-star"></i>
-                                <p class="downloads-c">4.4</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Reviews</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card-1">
-                    <div class="up">
-                        <p class="app-name">Learn To Draw ... </p>
-                    </div>
-                    <div class="down">
-                        <div class="left">
-                            <div class="up-1">
-                                <p class="downloads-c">10,000+</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Downloads</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="up-1 row">
-                                <i class="las la-star"></i>
-                                <p class="downloads-c">4.4</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Reviews</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card-1">
-                    <div class="up">
-                        <p class="app-name">Learn To Draw ... </p>
-                    </div>
-                    <div class="down">
-                        <div class="left">
-                            <div class="up-1">
-                                <p class="downloads-c">10,000+</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Downloads</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="up-1 row">
-                                <i class="las la-star"></i>
-                                <p class="downloads-c">4.4</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Reviews</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card-1">
-                    <div class="up">
-                        <p class="app-name">Learn To Draw ... </p>
-                    </div>
-                    <div class="down">
-                        <div class="left">
-                            <div class="up-1">
-                                <p class="downloads-c">10,000+</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Downloads</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="up-1 row">
-                                <i class="las la-star"></i>
-                                <p class="downloads-c">4.4</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Reviews</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="card-1">
-                    <div class="up">
-                        <p class="app-name">Learn To Draw ... </p>
-                    </div>
-                    <div class="down">
-                        <div class="left">
-                            <div class="up-1">
-                                <p class="downloads-c">10,000+</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Downloads</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="up-1 row">
-                                <i class="las la-star"></i>
-                                <p class="downloads-c">4.4</p>
-                            </div>
-                            <div class="down-1">
-                                <p class="downloads">Reviews</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="col1 col-lg-4">
+                <i class="las la-map-marker"></i>
+                <p>Address</p>
+                <p>Iran,Semnan</p>
             </div>
         </div>
     </div>
-
-    <div class="gtco-testimonials">
-        <h2>Comments</h2>
-        <div class="owl-carousel owl-carousel1 owl-theme">
-            <div>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10 Best
-                            Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                        <br>
-                        <hr class="style1">
-                        <br>
-                        <div class="box-12">
-                            <div class="left-img">
-                                <img class="card-img-top"
-                                    src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
-                                    alt="">
-                            </div>
-                            <div class="right-matn">
-                                <div class="up-2">
-                                    <p class="Sentiment">Sentiment</p>
-                                    <p class="vlaue-sent">positive</p>
-                                </div>
-                                <div class="down-2">
-                                    <p class="polarity">Sentiment_Polarity</p>
-                                    <p class="vlaue-polarity">1</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-
-                </div>
-            </div>
-            <div>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10 Best
-                            Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                        <br>
-                        <hr class="style1">
-                        <br>
-                        <div class="box-12">
-                            <div class="left-img">
-                                <img class="card-img-top"
-                                    src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
-                                    alt="">
-                            </div>
-                            <div class="right-matn">
-                                <div class="up-2">
-                                    <p class="Sentiment">Sentiment</p>
-                                    <p class="vlaue-sent">positive</p>
-                                </div>
-                                <div class="down-2">
-                                    <p class="polarity">Sentiment_Polarity</p>
-                                    <p class="vlaue-polarity">1</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                </div>
-            </div>
-            <div>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10 Best
-                            Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                        <br>
-                        <hr class="style1">
-                        <br>
-                        <div class="box-12">
-                            <div class="left-img">
-                                <img class="card-img-top"
-                                    src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
-                                    alt="">
-                            </div>
-                            <div class="right-matn">
-                                <div class="up-2">
-                                    <p class="Sentiment">Sentiment</p>
-                                    <p class="vlaue-sent">positive</p>
-                                </div>
-                                <div class="down-2">
-                                    <p class="polarity">Sentiment_Polarity</p>
-                                    <p class="vlaue-polarity">1</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card text-center">
-                    <div class="card-body">
-                        <p class="card-text">I like eat delicious food. That's I'm cooking food myself, case "10 Best
-                            Foods" helps lot, also "Best Before (Shelf Life)"</p>
-                        <br>
-                        <hr class="style1">
-                        <br>
-                        <div class="box-12">
-                            <div class="left-img">
-                                <img class="card-img-top"
-                                    src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
-                                    alt="">
-                            </div>
-                            <div class="right-matn">
-                                <div class="up-2">
-                                    <p class="Sentiment">Sentiment</p>
-                                    <p class="vlaue-sent">positive</p>
-                                </div>
-                                <div class="down-2">
-                                    <p class="polarity">Sentiment_Polarity</p>
-                                    <p class="vlaue-polarity">1</p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
+    <div class=" marg1">
+        <div class="line"></div>
+        <i class="lab la-instagram"></i>
+        <i class="lab la-linkedin-in"></i>
+        <i class="lab la-twitter"></i>
+        <div class="line"></div>
     </div>
 
-    <footer>
-        <p class="title-footer">Phoenix</p>
-        <div class="container">
-            <div class="row">
-                <div class="col1 col-lg-4">
-                    <i class="las la-phone"></i>
-                    <p>Call</p>
-                    <p>091234566788</p>
-                </div>
-                <div class="col1 col-lg-4">
-                    <i class="las la-envelope"></i>
-                    <p>mail</p>
-                    <p>ThePhoenix@yahoo.com</p>
-                </div>
-                <div class="col1 col-lg-4">
-                    <i class="las la-map-marker"></i>
-                    <p>Address</p>
-                    <p>Iran,Semnan</p>
-                </div>
-            </div>
-        </div>
-        <div class=" marg1">
-            <div class="line"></div>
-            <i class="lab la-instagram"></i>
-            <i class="lab la-linkedin-in"></i>
-            <i class="lab la-twitter"></i>
-            <div class="line"></div>
-        </div>
+    <p class="row justify-content-center marg2">copyright 2020</p>
+</footer>
 
-        <p class="row justify-content-center marg2">copyright 2020</p>
-    </footer>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="lib/owl/owl.carousel.min.js"></script>
-    <script src="js/Site.js"></script>
-    <script src="js/myjs.js"></script>
-    <script src="js/main2.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="single.js"></script>
+<script src="js/main.js"></script>
+<script src="lib/owl/owl.carousel.min.js"></script>
+<script src="js/site.js"></script>
+<script src="js/myjs.js"></script>
 
 </body>
+</html>
