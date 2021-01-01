@@ -270,11 +270,26 @@ body{
         font-size: 12px;
         justify-content: center;    }
 }
+
+.box-1{
+    display: flex;
+    justify-content: space-between;
+    padding:0 300px 0 300px;
+
+    .user{
+        background-color: #01b0f8;
+        margin: 10px;
+        width: 240px;
+        height: 140px;
+    }
+}
 .title-c2{
     font-size: 20px;
 }
 .product-category , .product{
 
+
+ 
 .card {
     display: flex;
     flex-direction: column;
@@ -338,9 +353,10 @@ body{
     margin-top: 15px;
 }
 
-.up .app-name{
+.up .app-name {
     margin-top: 30px;
     font-size:20px;
+
 }
 .down{
     width:65%;
