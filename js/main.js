@@ -5,7 +5,7 @@ $(document).ready(function () {
     $.ajax({
 
         type: "GET",
-        url: 'http://localhost:8080/mezz_phoenix/app/api/App/most_download.php' ,
+        url: 'http://localhost:8080/rest_api/api/App/most_download.php' ,
         dataType: 'json',
         success: function (data) {
             // console.log(data);
@@ -61,7 +61,7 @@ $(document).ready(function () {
     $.ajax({
 
         type: "GET",
-        url: 'http://localhost:8080/mezz_phoenix/app/api/App/most_points.php' ,
+        url: 'http://localhost:8080/rest_api/api/App/most_points.php' ,
         dataType: 'json',
         success: function (data) {
             //console.log(data);
