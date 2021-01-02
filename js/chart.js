@@ -1,97 +1,97 @@
-/* Pie chart based on the pen by aaronlsilber (https://codepen.io/aaronlsilber/pen/IqrkL) which is based on an article by James Litten (http://html5.litten.com/graphing-data-in-the-html5-canvas-element-part-iv-simple-pie-charts/) */
+$(document).ready(function () {
 
-/* Pie Chart Javascript
-=====================================================================*/
-var pieColors = ['rgb(236, 208, 120)', 'rgba(217, 91, 67, 0.7)', 'rgba(192, 41, 66, 0.7)', 'rgba(84, 36, 55, 0.7)', 'rgba(83, 119, 122, 0.7)', 'rgba(119, 146, 174, 0.7)'];
 
-function getTotal( arr ){
-    var j,
-        myTotal = 0;
-    
-    for( j = 0; j < arr.length; j++) {
-        myTotal += ( typeof arr[j] === 'number' ) ? arr[j] : 0;
+    var all_categories = [];
+    var holder = {};
+    var pie_arra = [];
+
+
+    $.ajax({
+        type: "GET",
+        url: 'http://localhost:8080/mezz_phoenix/app/api/App/categories.php',
+        dataType: 'json',
+        success: function (data) {
+            all_categories = data.categories;
+        }, async: false, // <- this turns it into synchronous
+
+        error: function (data, status, error) {
+
+            console.log("error");
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: 'http://localhost:8080/mezz_phoenix/app/api/App/read.php',
+        dataType: 'json',
+        success: function (data) {
+
+            data.forEach(function (d) {
+                if (holder.hasOwnProperty(d.category)) {
+                    holder[d.category] = holder[d.category] + parseFloat(d.installs);
+                } else {
+                    holder[d.category] = parseFloat(d.installs);
+                }
+            });
+
+
+            for (var prop in holder) {
+                pie_arra.push({category: prop, installs: holder[prop]});
+            }
+
+            // console.log(pie_arra);
+
+
+        }, async: false, // <- this turns it into synchronous
+
+        error: function (data, status, error) {
+
+            console.log("error");
+        }
+    });
+
+
+    var categories_pie = [];
+    for (var i = 0; i < pie_arra.length; i++) {
+        categories_pie[i] = pie_arra[i].category.toLowerCase();
     }
-    
-    return myTotal;
-}
 
-function drawPieChart( canvasId ) {
-    var i,
-        canvas = document.getElementById( canvasId ),
-        pieData = canvas.dataset.values.split(',').map( function(x){ return parseInt( x, 10 )}),
-        halfWidth = canvas.width * .5,
-        halfHeight = canvas.height * .5,
-        ctx = canvas.getContext( '2d' ),
-        lastend = 0,
-        myTotal = getTotal(pieData);
-
-    ctx.clearRect( 0, 0, canvas.width, canvas.height );
-
-    for( i = 0; i < pieData.length; i++) {
-        ctx.fillStyle = pieColors[i];
-        ctx.beginPath();
-        ctx.moveTo( halfWidth, halfHeight );
-        ctx.arc( halfWidth, halfHeight, halfHeight, lastend, lastend + ( Math.PI * 2 * ( pieData[i] / myTotal )), false );
-        ctx.lineTo( halfWidth, halfHeight );
-        ctx.fill();
-        lastend += Math.PI * 2 * ( pieData[i] / myTotal );
+    var installs_pie = [];
+    for (var i = 0; i < pie_arra.length; i++) {
+        installs_pie[i] = pie_arra[i].installs;
     }
-}
 
-drawPieChart('canPie');
 
-/* Peak Chart Javascript
-=====================================================================*/
-var peakColors = ['rgb(236, 208, 120)', 'rgba(217, 91, 67, 0.7)', 'rgba(192, 41, 66, 0.7)', 'rgba(84, 36, 55, 0.7)', 'rgba(83, 119, 122, 0.7)', 'rgba(119, 146, 174, 0.7)'];
+    var ctx = $('#canPie')[0].getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: categories_pie,
+            datasets: [
+                {
+                    label: "total",
+                    backgroundColor: [
+                        "#FE4243",
 
-function drawPeakChart( canvasId ) {
-    var i, start, peakPoint,
-        canvas = document.getElementById( canvasId ),
-        peakData = canvas.dataset.values.split(',').map( function(x){ return parseInt( x, 10 )}),
-        ctx = canvas.getContext( '2d' ),
-        max = Math.max.apply( Math, peakData ),
-        plotBase = canvas.width / peakData.length,
-        overlap = plotBase * .4;
-        plotBase += canvas.width * .05;
-    
-    ctx.clearRect( 0, 0, canvas.width, canvas.height );
-    
-    for( i = 0; i < peakData.length; i++) {
-        start = i === 0 ? 0 : i * plotBase - i * overlap;
-        peakPoint = canvas.height - Math.round( canvas.height * ( peakData[i] / max ) );
-        ctx.fillStyle = peakColors[i];
-        ctx.beginPath();
-        ctx.moveTo( start, canvas.height );
-        ctx.lineTo( start + plotBase * .5, peakPoint );
-        ctx.lineTo( start + plotBase, canvas.height );
-        ctx.lineTo( start, canvas.height );
-        ctx.fill();
-    }
-}
+                    ],
+                    borderColor: '#000',
+                    data: installs_pie
+                }
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Number of installs by categories'
+            }
+        }
+    });
 
-drawPeakChart('canPeak');
 
-/* Bar Chart Javascript
-=====================================================================*/
-var barColors = ['rgb(236, 208, 120)', 'rgba(217, 91, 67, 0.7)', 'rgba(192, 41, 66, 0.7)', 'rgba(84, 36, 55, 0.7)', 'rgba(83, 119, 122, 0.7)', 'rgba(119, 146, 174, 0.7)'];
+});
 
-function drawBarChart( canvasId ) {
-    var i, start, top,
-        canvas = document.getElementById( canvasId ),
-        barData = canvas.dataset.values.split(',').map( function(x){ return parseInt( x, 10 )}),
-        ctx = canvas.getContext( '2d' ),
-        max = Math.max.apply( Math, barData ),
-        padding = 20,
-        plotWidth = canvas.width / barData.length - padding;
-    
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    for( i = 0; i < barData.length; i++) {
-        start = i === 0 ? 0 : i * ( plotWidth + padding );
-        top = canvas.height - Math.round( canvas.height * ( barData[i] / max ) );
-        ctx.fillStyle = peakColors[i];
-        ctx.fillRect( start, top, plotWidth, canvas.height - top);
-    }
-}
 
-drawBarChart('canBar');
+
+
+
+

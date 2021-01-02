@@ -15,15 +15,18 @@ $(document).ready(function () {
             }
         }
     };
+
     var id = getUrlParameter('q');
     var comments = [];
     var sentiment_class, icon, cat;
 
     $.ajax({
         type: "GET",
-        url: 'http://localhost/app/api/App/read_single.php?q=' + id,
+        url: 'http://localhost:8080/mezz_phoenix/app/api/App/read_single.php?q=' + id,
         dataType: 'json',
         success: function (data) {
+
+           //console.log(data);
 
             $("#name").text(data.name);
             $("#category").text(data.category);
@@ -62,7 +65,6 @@ $(document).ready(function () {
                         icon = "fa-thumbs-down";
                     } else {
                         icon = "fa-question-circle";
-
                     }
 
                     var create_cm = ' <div class="box-comment box--1 ' + sentiment_class + '">' +
@@ -87,9 +89,8 @@ $(document).ready(function () {
         },
         async: false, // <- this turns it into synchronous
         error: function (data, status, error) {
-            console.log(data);
-            console.log(status);
-            console.log(error);
+
+            console.log("error");
         }
     });
 
@@ -99,11 +100,11 @@ $(document).ready(function () {
         url: 'http://localhost:8080/mezz_phoenix/app/api/App/similar_apps.php?q=' + cat,
         dataType: 'json',
         success: function (data) {
-            //console.log(data);
+           // console.log(data);
 
             $.each(data, function (i) {
 
-                if (data[i].name.length > 15) {
+                if (data[i].name.length > 20) {
                     data[i].name = data[i].name.substring(0, 20);
                     data[i].name = data[i].name.concat(" ...");
                 }
@@ -147,9 +148,7 @@ $(document).ready(function () {
         }
     });
 
-
     $("#more").attr("href", "./more.html?q=" + cat);
-
 });
 
 
