@@ -901,4 +901,61 @@ hr.style1 {
 .six:before {
   background: rgba(119, 146, 174, 0.7);
 }
+
+.comment-1 {
+  margin-top: -5px;
+}
+
+.box-comment {
+  display: flex;
+  padding: 10px;
+  background-color: #01b0f8;
+}
+
+.box-comment .user {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.comment {
+  margin-top: 40px;
+}
+
+.comment .date2 {
+  margin-top: -15px;
+  opacity: 70%;
+}
+
+.box--1 {
+  background-color: #fff1f1;
+  margin: 10px 0 10px 0;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+}
+
+.box--1 .user {
+  border-radius: 100%;
+}
+
+.box-1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 300px 0 300px;
+}
+
+.box-1 .user {
+  background-color: #fff1f1;
+  margin: 10px;
+  width: 240px;
+  height: 140px;
+}
+
+.left-comment {
+  padding: 20px;
+}
+
+.title-c2 {
+  font-size: 20px;
+}
 /*# sourceMappingURL=main.css.map */
