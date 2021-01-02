@@ -312,13 +312,15 @@ body{
 
 
 
+}
+
 .card-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFF1F1;
+    background-color: #fff1f1;
     height: 180px;
-    width: 240px;
+    width: 260px;
     border: 0ch;
     position: relative;
     border-radius: 15px;
@@ -326,11 +328,23 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0 10px 0 10px;
+
+    a{
+        color: #111;
+        text-decoration: none;
+    }
  
 
 }
-}
 
+.main--box{
+    background-color:$color-main;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+}
 .but{
     border-radius: 30px;
     background-color: $color-main;
