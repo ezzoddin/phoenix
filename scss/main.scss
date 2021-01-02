@@ -937,10 +937,28 @@ display: none;
     margin: 10px 0 10px 0;
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
+
+  
+
     .user{
         border-radius: 100%;
     }
 }
+
+
+.positive {
+    background-color: #caffbf !important;
+
+  }
+
+  .negative {
+    background-color: #fff1f1 !important;
+  }
+
+  .neutral {
+    background-color: #fdffb6 !important;
+  }
+
 
 .box-1{
     display: flex;

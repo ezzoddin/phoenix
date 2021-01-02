@@ -952,6 +952,18 @@ hr.style1 {
   border-radius: 100%;
 }
 
+.positive {
+  background-color: #caffbf !important;
+}
+
+.negative {
+  background-color: #fff1f1 !important;
+}
+
+.neutral {
+  background-color: #fdffb6 !important;
+}
+
 .box-1 {
   display: flex;
   justify-content: space-between;
