@@ -1,2 +1,9 @@
-# phoenix playe store 
-small project for our university ;)
+# Phoenix Play Store 
+We have Diagrams on this branch
+
+##Diagram List
+- Class
+- Sequence
+- Activity
+- Collaboration
+- State
