@@ -1,5 +1,5 @@
-const nextIcon = '<img src = "image/prev.png" alt:"right">';
-const prevIcon = '<img src = "image/next.png" alt:"left">';
+const nextIcon = '<img src = "../image/prev.png" alt:"right">';
+const prevIcon = '<img src = "../image/next.png" alt:"left">';
 
 
 $(".product-category").owlCarousel({
