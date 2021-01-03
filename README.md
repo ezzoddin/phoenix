@@ -1,2 +1,2 @@
-# phoenix playe store 
-small project for our university ;)
+# Phoenix Play Store 
+We have front codes on this branch
