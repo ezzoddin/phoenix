@@ -1,7 +1,7 @@
 # Phoenix Play Store 
 We have Diagrams on this branch
 
-##Diagram List
+## Diagram List
 - Class
 - Sequence
 - Activity
