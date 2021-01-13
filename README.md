@@ -11,6 +11,7 @@ in 33 different categories. It has over 1 million visitors a month.
 Every app has rating and review parts, as a guide to compare and 
 download the considered app among lots of them.
 
+visit project on [https://mezz.ir/phoenix/](https://mezz.ir/phoenix/)
 ## Technologies
 - Balsamiq, Adobe XD
 - Html, Css, Sass,Bootstrap , Js, Owl, Jquery
@@ -21,6 +22,6 @@ download the considered app among lots of them.
 API is separate from Front
 
 ## Support
-You can contact us by sending mail to *ThePhoneix@yahoo.com* or calling *091234566788* 
+You can contact us by sending mail to *info@mezz.ir* 
 Also you can follow us on **Instagram, Twitter** and **Linkdin**
 
