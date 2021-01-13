@@ -46,4 +46,4 @@ You can contact us by sending mail to *info@mezz.ir*
 Also you can follow us on **[Instagram](https://instagram.com/mezz.ir/)** 
 
 
-**Free Software, Hell Yeah!**
+**Free Software, and open source!**
