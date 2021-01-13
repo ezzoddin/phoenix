@@ -9,7 +9,7 @@ An Android play store for searching and installing apllications.
 We visualized data from [Kaggle Google Play Dataset](https://www.kaggle.com/lava18/google-play-store-apps)
 
 ## Detailed diagrams & Documentation
-The documentaions to this app is in here[https://github.com/mezz-ir/phoenix/].
+The documentaions to this app is in [here](https://github.com/mezz-ir/phoenix/).
 
 ## Usage
 Phoenix is a website including over 10,000 android applications
@@ -35,15 +35,15 @@ visit project on [https://mezz.ir/phoenix/](https://mezz.ir/phoenix/)
 
 
 ## Contributors
-  - Mezz [https://github.com/mezz-ir]
-  - Fatemeh slr[https://github.com/ftmeslr]
-  - Negin bt [https://github.com/negin-bt]
-  - Rojan [https://github.com/R0JAN]
+  - [Mezz](https://github.com/mezz-ir)
+  - [Fatemeh slr](https://github.com/ftmeslr)
+  - [Negin bt] (https://github.com/negin-bt)
+  - [Rojan] (https://github.com/R0JAN)
 
 
 ## Support
 You can contact us by sending mail to *info@mezz.ir* 
-Also you can follow us on **Instagram[https://instagram.com/mezz_ir/]** 
+Also you can follow us on **[Instagram](https://instagram.com/mezz.ir/)** 
 
 
 **Free Software, Hell Yeah!**
