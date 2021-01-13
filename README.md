@@ -37,8 +37,8 @@ visit project on [https://mezz.ir/phoenix/](https://mezz.ir/phoenix/)
 ## Contributors
   - [Mezz](https://github.com/mezz-ir)
   - [Fatemeh slr](https://github.com/ftmeslr)
-  - [Negin bt] (https://github.com/negin-bt)
-  - [Rojan] (https://github.com/R0JAN)
+  - [Negin bt](https://github.com/negin-bt)
+  - [Rojan](https://github.com/R0JAN)
 
 
 ## Support
