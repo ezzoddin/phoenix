@@ -9,7 +9,7 @@ An Android play store for searching and installing apllications.
 We visualized data from [Kaggle Google Play Dataset](https://www.kaggle.com/lava18/google-play-store-apps)
 
 ## Detailed diagrams & Documentation
-The documentaions to this app is in [here](https://github.com/mezz-ir/phoenix/).
+The documentaions to this app is in [here](https://github.com/mezz-ir/phoenix/blob/main/document/documentation.pdf).
 
 ## Usage
 Phoenix is a website including over 10,000 android applications
